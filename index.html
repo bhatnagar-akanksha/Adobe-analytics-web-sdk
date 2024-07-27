@@ -27,13 +27,40 @@
 
     <script>
         window.adobeDataLayer = window.adobeDataLayer || [];
-        window.adobeDataLayer.push({ "test1": "Hello World its Akanksha" });
+window.adobeDataLayer.push({ 
+  'event': 'pageView',
+  'page': {
+    'url': window.location.href,
+    'name': 'Product Page',
+    'category': 'Electronics',
+    'subcategory': 'Mobile Phones'
+  },
+  'user': {
+    'userID': 'AkankshaBhatnagar1206',
+    'loginStatus': 'logged-in',
+    'membershipLevel': 'gold'
+  },
+  'product': {
+    'id': '98765',
+    'name': 'Super Smartphone X',
+    'category': 'Electronics',
+    'brand': 'TechBrand',
+    'price': '799.99',
+    'currency': 'USD'
+  }
+});
+
 
         
         function buttonClick(buttonNumber) {
             window.adobeDataLayer = window.adobeDataLayer || [];
             window.adobeDataLayer.push({"event":"click","data":`button ${buttonNumber} is clicked`})
             alert('Button ' + buttonNumber + ' clicked!');
+      }
+      function linkClick(linkNumber) {
+            window.adobeDataLayer = window.adobeDataLayer || [];
+            window.adobeDataLayer.push({"event":"linkclick","data":`link ${buttonNumber} is clicked`})
+            alert('Button ' + linkNumber + ' clicked!');
       }
          
     </script>
