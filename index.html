@@ -31,7 +31,9 @@
 
         
         function buttonClick(buttonNumber) {
-       alert('Button ' + buttonNumber + ' clicked!');
+            window.adobeDataLayer = window.adobeDataLayer || [];
+            window.adobeDataLayer.push({"event":"click","data":`button ${buttonNumber} is clicked`})
+            alert('Button ' + buttonNumber + ' clicked!');
       }
          
     </script>
