@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dummy Website</title>
     <link rel="stylesheet" href="styles.css">
+     <script src="js/adobe-client-data-layer.min.js" async defer></script>
 </head>
 <body>
-    <h1>Dummy Website</h1>
+    <h1>Adobe Analytics Web sdk</h1>
 
     <div class="buttons">
         <button onclick="buttonClick(1)" class="button1">Button 1</button>
@@ -19,18 +20,23 @@
     </div>
 
     <div class="links">
-        <a href="#link1">Link 1</a>
-        <a href="#link2">Link 2</a>
-        <a href="#link3">Link 3</a>
-        <a href="#link4">Link 4</a>
-        <a href="#link5">Link 5</a>
+        <a href="#link1" class='link1'>Custom link 1</a>
+        <a href="#link2" class='link2'>Custom link 2</a>
+        <a href="#link3" class='link3'>Custom link 3</a>
+        <a href="#link4" class='link4'>Download link</a>
+        <a href="#link5"class='link5'>Exit Link</a>
     </div>
 
     <script>
+        #ACDL
+        window.adobeDataLayer = window.adobeDataLayer || [];
+        window.adobeDataLayer.push({ "test1": "Hello World Its Akanksha" });
 
-function buttonClick(buttonNumber) {
-    alert('Button ' + buttonNumber + ' clicked!');
-}
+        
+        function buttonClick(buttonNumber) {
+       alert('Button ' + buttonNumber + ' clicked!');
+      }
+         
     </script>
 </body>
 </html>
